@@ -14,6 +14,7 @@ This project is related to **vibration analysis**, where students are provided w
 | `vib_force_sinusoidal.m`             | Analyzes forced vibration with a sinusoidal force                     |
 | `vib_force_step_response.m`          | Analyzes forced vibration with a step response                        |
 | `vib_free_oscillations.m`            | Analyzes free vibration without external force                        |
+| `governing_equations.pdf`           | Governing equations of the system for vibration analysis             |
 
 ---
 
