@@ -1,77 +1,116 @@
-# Planar Vibrations System Simulation
+# Personal Programming Code Examples
 
-This project presents a complete kinematic and dynamic analysis of a multi-degree-of-freedom (MDOF) mechanical system. The system undergoes free oscillations and is subjected to different types of forces, including sinusoidal, step, and rectangular forces. MATLAB is used to simulate the system’s behavior, compute system responses, and visualize the motion.
+This project is related to **vibration analysis**, where students are provided with a diagram image and are required to analyze the system in MATLAB. The project includes personal programming examples focused on simulating forced and free oscillations in various systems, including rectangular, step, and sinusoidal inputs. These examples demonstrate my ability to solve differential equations and simulate dynamic systems using MATLAB.
 
 ## 📁 File Structure
 
-| File Name                        | Description                                                   |
-|-----------------------------------|---------------------------------------------------------------|
-| `vib_free_oscillations.m`         | Simulates free oscillations of the system (no external force).|
-| `vib_force_sinusoidal.m`          | Simulates the system’s response to a sinusoidal force input.  |
-| `vib_force_step_response.m`       | Simulates the system’s response to a step input force.        |
-| `vib_force_rectangular.m`         | Simulates the system’s response to a rectangular force input. |
-| `simulation_free_oscillations.m`  | Script to set up and plot the free oscillations simulation.   |
-| `simulation_forced_oscillations.m`| Script to set up and plot the forced oscillations simulation. |
-| `simulation_forced_rectangular.m` | Script to set up and plot the simulation with rectangular force.|
-| `simulation_forced_step.m`        | Script to set up and plot the simulation with step force.     |
+| **File Name**                        | **Description**                                                       |
+|--------------------------------------|-----------------------------------------------------------------------|
+| `simulation_forced_oscillations.m`   | Simulates forced vibration with a sinusoidal input                   |
+| `simulation_forced_rectangular.m`    | Simulates forced vibration with a rectangular input                  |
+| `simulation_forced_step.m`           | Simulates forced vibration with a step input                         |
+| `simulation_free_oscillations.m`     | Simulates free vibration without external forcing                    |
+| `vib_force_rectangular.m`            | Analyzes forced vibration with a rectangular force                    |
+| `vib_force_sinusoidal.m`             | Analyzes forced vibration with a sinusoidal force                     |
+| `vib_force_step_response.m`          | Analyzes forced vibration with a step response                        |
+| `vib_free_oscillations.m`            | Analyzes free vibration without external force                        |
+
+---
 
 ## ⚙️ Requirements
 
-- MATLAB R2017b or higher (recommended)
-- Optimization Toolbox (for `fsolve` used in dynamic analysis)
+- **MATLAB R2016 or newer** (Recommended for compatibility with scripts)
+
+---
 
 ## 🚀 How to Run
 
-To run the simulations and analyze the system, follow the steps below:
+1. Open MATLAB.
+2. Navigate to the project folder using the `cd` command or through the file browser.
+3. Run the following scripts:
+   - **Simulate forced vibration (sinusoidal input)**:
+     ```matlab
+     simulation_forced_oscillations
+     ```
+     [Click here to view the code](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/simulation_forced_oscillations.m)
 
-1. **Open MATLAB.**
-2. **Navigate to the project folder** where the files are stored.
-3. Run the following scripts depending on the analysis you want to perform:
+   - **Simulate forced vibration (rectangular input)**:
+     ```matlab
+     simulation_forced_rectangular
+     ```
+     [Click here to view the code](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/simulation_forced_rectangular.m)
 
-   For **free oscillations**:
-   ```matlab
-   simulation_free_oscillations
+   - **Simulate forced vibration (step input)**:
+     ```matlab
+     simulation_forced_step
+     ```
+     [Click here to view the code](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/simulation_forced_step.m)
 
-For forced oscillations with sinusoidal input:
+   - **Simulate free vibration**:
+     ```matlab
+     simulation_free_oscillations
+     ```
+     [Click here to view the code](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/simulation_free_oscillations.m)
 
-simulation_forced_oscillations
+   - **Analyze forced vibration (rectangular force)**:
+     ```matlab
+     vib_force_rectangular
+     ```
+     [Click here to view the code](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/vib_force_rectangular.m)
 
-For forced oscillations with rectangular input:
+   - **Analyze forced vibration (sinusoidal force)**:
+     ```matlab
+     vib_force_sinusoidal
+     ```
+     [Click here to view the code](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/vib_force_sinusoidal.m)
 
-simulation_forced_rectangular
+   - **Analyze forced vibration (step response)**:
+     ```matlab
+     vib_force_step_response
+     ```
+     [Click here to view the code](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/vib_force_step_response.m)
 
-For forced oscillations with step input:
+   - **Analyze free vibration (no external force)**:
+     ```matlab
+     vib_free_oscillations
+     ```
+     [Click here to view the code](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/vib_free_oscillations.m)
 
-simulation_forced_step
+---
 
-📊 Output
+## 📊 Output
 
-The simulations will generate the following outputs:
+- **Plots** of:
+  - Displacement, velocity, and acceleration as functions of time
+  - Forced and free vibration in response to different inputs
+  - Frequency responses and system behavior under different excitation forces
 
-    Plots:
+---
 
-        Angular velocities and accelerations of different links.
+## 📌 Notes
 
-        Linear velocities and accelerations of points in the mechanism.
+- The simulations are based on solving second-order differential equations using numerical methods in MATLAB.
+- Depending on the system's parameters, different behaviors such as resonance, damping, and frequency response can be observed.
 
-        Required input torque for motion.
+---
 
-    Real-time animation showing the motion of the system under various conditions.
+## 👩‍💻 Author
 
-📌 Notes
-
-    The system consists of three degrees of freedom and can be subjected to free or forced oscillations.
-
-    Forces: The system can be subjected to sinusoidal, rectangular, or step forces, which are modeled using time-dependent force functions.
-
-    Numerical Methods: The simulations use ode45 (MATLAB's built-in ODE solver) for solving the system's differential equations.
-
-    Input Torque: For dynamic analysis, the required input torque is calculated using numerical methods such as solving nonlinear systems with fsolve.
-
-    Damping and Stiffness: The damping and stiffness matrices are adjusted to simulate various damping conditions.
-
-👩‍💻 Author
-
-Mahsa Vanda
-B.Sc. in Mechanical Engineering
+**Mahsa Vanda**  
+B.Sc. in Mechanical Engineering  
 Babol Noshirvani University of Technology
+
+---
+
+## 🖥️ Code Repositories
+
+Here are the links to the code files for each part of the project. You can view or copy the code by clicking the links below:
+
+- [Simulate Forced Vibration (Sinusoidal)](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/simulation_forced_oscillations.m)
+- [Simulate Forced Vibration (Rectangular)](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/simulation_forced_rectangular.m)
+- [Simulate Forced Vibration (Step)](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/simulation_forced_step.m)
+- [Simulate Free Vibration](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/simulation_free_oscillations.m)
+- [Analyze Forced Vibration (Rectangular Force)](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/vib_force_rectangular.m)
+- [Analyze Forced Vibration (Sinusoidal Force)](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/vib_force_sinusoidal.m)
+- [Analyze Forced Vibration (Step Response)](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/vib_force_step_response.m)
+- [Analyze Free Vibration](https://github.com/Mahsa1819/Personal-Programming-Code-Example/blob/main/vib_free_oscillations.m)
